@@ -5,6 +5,7 @@
         "confirmed": 14,
         "recovered": 4,
         "deaths": 0,
+        "active":32209,
     },
     {
         "id": "DB",
