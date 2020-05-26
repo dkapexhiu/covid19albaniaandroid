@@ -17,6 +17,7 @@
     {
         "id": "BR",
         "state": "Berat",
+        "active": 32209,
         "confirmed": 14,
         "recovered": 4,
         "deaths": 0,
