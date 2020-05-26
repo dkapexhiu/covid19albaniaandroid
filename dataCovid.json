@@ -5,6 +5,14 @@
         "recovered": 4,
         "deaths": 0,      
         "active": 0,
+        "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
 
     },
      {
@@ -14,7 +22,15 @@
         "recovered": 1,
         "deaths": 0,
         "active": 0,
-    },
+        "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
+     },
     {
         "id": "DR",
         "state": "Durres",
@@ -22,13 +38,29 @@
         "recovered": 155,
         "deaths": 6,
         "active": 0,
+         "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0   
     },
     {
         "id": "EL",
         "state": "Elbasan",
         "confirmed": 20,
         "recovered": 19,
-        "deaths": 0
+        "deaths": 0,
+           "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "FR",
@@ -37,6 +69,14 @@
         "recovered": 45,
         "deaths": 3,
          "active": 0,
+         "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "GJ",
@@ -45,6 +85,14 @@
         "recovered": 0,
         "deaths": 0,
         "active": 0,
+           "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "KC",
@@ -52,7 +100,15 @@
         "confirmed": 19,
         "recovered": 18,
         "deaths": 0,
-            "active": 0,
+         "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
+        "active": 0,
     },
     {
         "id": "KU",
@@ -61,6 +117,14 @@
         "recovered": 36,
         "deaths": 1,
             "active": 0,
+            "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "LZ",
@@ -69,6 +133,14 @@
         "recovered": 51,
         "deaths": 0,
         "active": 0,
+           "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "SH",
@@ -77,6 +149,14 @@
         "recovered": 110,
         "deaths": 2,
             "active": 0,
+            "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "TR",
@@ -85,6 +165,14 @@
         "recovered": 352,
         "deaths": 19,
              "active": 0,
+           "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "VL",
@@ -93,6 +181,14 @@
         "recovered": 4,
         "deaths": 1,
               "active": 0,
+          "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "TO",
@@ -101,5 +197,13 @@
         "recovered": 769,
         "deaths": 32,
             "active": 0,
-    },
+         "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
+    }
 ]
