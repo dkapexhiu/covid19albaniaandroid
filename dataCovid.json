@@ -1,10 +1,33 @@
 [
+        "id": "IN-MH",
+        "state": "Maharashtra",
+        "active": 32209,
+        "confirmed": 47190,
+        "recovered": 13404,
+        "deaths": 1577,
+        "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
+    },
     {
         "id": "BR",
         "state": "Berat",
         "confirmed": 14,
         "recovered": 4,
         "deaths": 0,
+        "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     },
     {
         "id": "DB",
