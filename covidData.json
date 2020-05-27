@@ -19,6 +19,11 @@
         "active": 12
     },
      {
+        "id": "KA",
+        "state": "Kamez",
+        "active": 9
+    },
+     {
         "id": "BR",
         "state": "Berat",
         "active": 6
@@ -32,10 +37,5 @@
         "id": "KC",
         "state": "Korce",
         "active": 1
-    },
-    {
-        "id": "KA",
-        "state": "Kamez",
-        "active": 9
-    },
+    }
 ]
