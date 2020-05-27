@@ -1,13 +1,27 @@
-[
-    {
-        "id": "BR",
-        "state": "Berat",
-        "active": 10
+[    {
+        "id": "TR",
+        "state": "Tirane",
+        "active": 101
     },
-    {
+     {
         "id": "DR",
         "state": "Durres",
-        "active": 54
+        "active": 51
+    },
+     {
+        "id": "KR",
+        "state": "Kruje",
+        "active": 23
+    },
+     {
+        "id": "SH",
+        "state": "Shkoder",
+        "active": 12
+    },
+     {
+        "id": "BR",
+        "state": "Berat",
+        "active": 6
     },
     {
         "id": "FR",
@@ -20,28 +34,8 @@
         "active": 1
     },
     {
-        "id": "SH",
-        "state": "Shkoder",
-        "active": 12
-    },
-    {
-        "id": "TR",
-        "state": "Tirane",
-        "active": 80
-    },
-    {
-        "id": "KR",
-        "state": "Kruje",
-        "active": 24
-    },
-    {
         "id": "KA",
         "state": "Kamez",
         "active": 9
     },
-    {
-        "id": "MR",
-        "state": "Mirdite",
-        "active": 1
-    }
 ]
