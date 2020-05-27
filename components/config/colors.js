@@ -5,6 +5,7 @@ export default{
     recoveredColor : '#A8E364', //Recovered green
     DeceasedColor : '#9EA7A6', //Decreased grey
     totalColor : '#FF3E00', //Total red
-    timeColor : '#6c757d', //Total red
+    timeColor : 'white', //Total red
     black : '#000',
+    white: '#fff'
 }

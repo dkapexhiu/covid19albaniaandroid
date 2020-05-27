@@ -10,7 +10,6 @@ import {
   Dimensions,
 } from 'react-native';
 
-import dataCovid from '../store/dataCovid.json';
 import DataList from './DataList.js';
 import colors from './config/colors.js';
 
@@ -23,90 +22,52 @@ export default class HomeData extends React.Component {
       currentTotal: 0,
       currentRecovered: 0,
       currentDeceased: 0,
-      currentActive: 0,
       newDayTotal: 0,
       newDayRecovered: 0,
-      newDayDeceased: 0,
-      newDayActive: 0,
+      newDayDeceased: 0
     };
   }
 
-  fetchUsers() {
-    fetch('https://raw.githubusercontent.com/dkapexhiu/covid19albaniaandroid/master/dataCovid.json')
-      .then(response => {
-        console.log(response.data);
-        this.setState({
-          loading: false,
-          dataSource: response.data,
-        });
+fetchUsers(){
+  fetch("https://raw.githubusercontent.com/dkapexhiu/covid19albaniaandroid/master/covidData.json")
+    .then(response => response.json())
+    .then((responseJson)=> {
+      this.setState({
+       loading: false,
+       dataSource: responseJson
       })
-      .catch(error => {
-        console.log(error);
-      });
-  }
+      
+    })
+    .catch(error=>console.log(error)) //to catch the errors if any
+    // console.log(responseJson)
+    // this.calculateCount();
+  
+}
+
+fetchTotal(){
+  fetch("https://raw.githubusercontent.com/dkapexhiu/covid19albaniaandroid/master/total.json")
+    .then(response => response.json())
+    .then((responseTot)=> {
+      this.setState({
+        currentTotal: responseTot[0].Konfirmuar,
+        currentRecovered: responseTot[0].Sheruar,
+        currentDeceased: responseTot[0].Vdekje
+      })
+    })
+    .catch(error=>console.log(error)) //to catch the errors if any
+    // console.log(responseJson)
+    // this.calculateCount();
+  
+}
 
   componentDidMount() {
     this.fetchUsers();
+    this.fetchTotal();
   }
 
   /* componentDidUpdate(){
     this.calculateCount();
   } */
-
-  calculateCount() {
-    console.log('cc');
-    // console.log("cclen", this.state.dataSource)
-    // console.log("cclen", this.state.dataSource.length)
-    if (this.state.dataSource.length > 0) {
-      let data = /* JSON.stringify( */ this.state.dataSource;
-      console.log(data);
-
-      // if(recoveredResult == 0||DeceasedResult == 0||activeResult == 0){
-      console.log('inside');
-      // var dataValue = Array.from(data)
-      // var activeResult = data.map(activeVal => activeVal.active).reduce((nextValue, activeVal) => activeVal + nextValue);
-      var recoveredResult = data
-        .map(activeVal => activeVal.recovered)
-        .reduce((nextValue, activeVal) => activeVal + nextValue);
-      var DeceasedResult = data
-        .map(activeVal => activeVal.deaths)
-        .reduce((nextValue, activeVal) => activeVal + nextValue);
-      var activeResult = data
-        .map(activeVal => activeVal.active)
-        .reduce((nextValue, activeVal) => activeVal + nextValue);
-      var totalResult = recoveredResult + DeceasedResult + activeResult;
-      console.log(recoveredResult);
-      console.log(DeceasedResult);
-      console.log(activeResult);
-      var newDayRecoveredResult = data
-        .map(activeVal => activeVal.rChanges)
-        .reduce((nextValue, activeVal) => activeVal + nextValue);
-      var newDayDeceasedResult = data
-        .map(activeVal => activeVal.dChanges)
-        .reduce((nextValue, activeVal) => activeVal + nextValue);
-      var newDayActiveResult = data
-        .map(activeVal => activeVal.aChanges)
-        .reduce((nextValue, activeVal) => activeVal + nextValue);
-      var newDayTotalResult =
-        newDayRecoveredResult + newDayDeceasedResult + newDayActiveResult;
-
-      this.setState({
-        currentTotal: totalResult,
-        currentRecovered: recoveredResult,
-        currentDeceased: DeceasedResult,
-        currentActive: activeResult,
-        newDayRecovered: newDayRecoveredResult,
-        newDayDeceased: newDayDeceasedResult,
-        newDayActive: newDayActiveResult,
-        newDayTotal: newDayTotalResult,
-      });
-      // }
-      console.log(recoveredResult);
-      console.log(this.state.currentRecovered);
-      console.log(this.state.currentDeceased);
-      console.log(this.state.currentActive);
-    }
-  }
 
   handleUpdatedData() {}
 
@@ -125,12 +86,12 @@ export default class HomeData extends React.Component {
               total={
                 element.confirmed +
                 element.recovered +
-                element.deaths +
-                element.active
+                element.deaths
               }
               recoveredChanges={element.rChanges}
               deceasedChanges={element.dChanges}
               heading={false}
+              active={element.active}
             />
           </View>
         );
@@ -172,34 +133,24 @@ export default class HomeData extends React.Component {
           <View style={styles.totalContainerOne}>
             <Text style={[styles.textStyle, styles.textTotal]}>Total</Text>
             <Text>
-              {this.state.currentTotal}[{this.state.newDayTotal}
-              {this.state.newDayTotal > 0 ? upArrow : null}]
+              {this.state.currentTotal}
             </Text>
           </View>
           <View style={styles.totalContainerTwo}>
             <View style={styles.recoveredContainer}>
               <Text style={[styles.textStyle, styles.textRecovered]}>
-                Recovered
+                Sheruar
               </Text>
               <Text>
-                {this.state.currentRecovered}[{this.state.newDayRecovered}
-                {this.state.newDayRecovered > 0 ? upArrow : null}]
+                {this.state.currentRecovered}
               </Text>
             </View>
             <View style={styles.DeceasedContainer}>
               <Text style={[styles.textStyle, styles.textDeceased]}>
-                Deceased
+                Vdekje
               </Text>
               <Text>
-                {this.state.currentDeceased}[{this.state.newDayDeceased}
-                {this.state.newDayDeceased > 0 ? upArrow : null}]
-              </Text>
-            </View>
-            <View style={styles.activeContainer}>
-              <Text style={[styles.textStyle, styles.textActive]}>Active</Text>
-              <Text>
-                {this.state.currentActive}[{this.state.newDayActive}
-                {this.state.newDayActive > 0 ? upArrow : null}]
+                {this.state.currentDeceased}
               </Text>
             </View>
           </View>
@@ -207,18 +158,14 @@ export default class HomeData extends React.Component {
         <View style={styles.containerBottom}>
           <DataList
             key="heading"
-            state="State"
-            total="Total"
-            recovered="Recovered"
-            deceased="Deceased"
+            state="Qyteti"
+            active="Aktiv"
             heading={true}
           />
           {/* <DataList state="State" total="Total" recovered="Recovered" Deceased="Deceased" heading={true}/> */}
 
           {this.handleDataList()}
         </View>
-        <Text style={{ fontSize: 12 }}>*Changes in future Updates</Text>
-        {/* </ScrollView> */}
       </View>
     );
   }
@@ -273,7 +220,7 @@ const styles = StyleSheet.create({
   },
   recoveredContainer: {
     // flex: 1,
-    width: '30%',
+    width: '42%',
     // height : '45%',
     backgroundColor: '#eeeeee',
     elevation: 50,
@@ -286,7 +233,7 @@ const styles = StyleSheet.create({
   },
   DeceasedContainer: {
     // flex: 1,
-    width: '30%',
+    width: '42%',
     // height : '45%',
     backgroundColor: '#eeeeee',
     elevation: 50,
@@ -296,19 +243,6 @@ const styles = StyleSheet.create({
   },
   textDeceased: {
     color: colors.DeceasedColor,
-  },
-  activeContainer: {
-    // flex: 1,
-    width: '30%',
-    // height : '45%',
-    backgroundColor: '#eeeeee',
-    elevation: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 15,
-  },
-  textActive: {
-    color: colors.activeColor,
   },
   textStyle: {
     fontSize: 18,

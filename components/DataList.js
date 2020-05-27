@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Platform, StatusBar, ScrollView, Dimensions } from 'react-native';
 
-import dataCovid from '../store/dataCovid.json'
 import colors from './config/colors.js'
 
 
@@ -13,22 +12,16 @@ export default class DataList extends React.Component{
     }
  }
   render() {
-      const {state, total, recovered, deceased, heading, key, recoveredChanges, deceasedChanges} = this.props;
-      const testStyle = (heading)? styles.testHeadingStyle : styles.dataStyle
-      const upArrow = '↑'
+      const {state, total, recovered, deceased, heading, key, recoveredChanges, deceasedChanges, active} = this.props;
+      const testStyle = (heading)? styles.testHeadingStyle : styles.dataStyle;
+      const upArrow = '↑';
     return (
         <View style={styles.container}>
             <View style={styles.stateBoxState}>
                 <Text style={styles.dataStateStyle}>{state}</Text>
             </View>
             <View style={styles.stateBox}>
-                <Text style={testStyle}>{total}</Text>
-            </View>
-            <View style={styles.stateBox}>
-                <Text style={testStyle}>{recovered}{(recoveredChanges>0)?<Text>[{recoveredChanges}{upArrow}]</Text>:null}</Text>
-            </View>
-            <View style={styles.stateBox}>
-                <Text style={testStyle}>{deceased}{(deceasedChanges>0)?<Text>[{deceasedChanges}{upArrow}]</Text>:null}</Text>
+                <Text style={testStyle}>{active}</Text>
             </View>
         </View>
     );
@@ -42,7 +35,7 @@ const styles = StyleSheet.create({
     // height : '100%',
     // height: 1500,
     flexDirection : 'row',
-    backgroundColor: 'rgba(0, 0, 0, 0.20)',
+    //backgroundColor: 'rgba(0, 0, 0, 0.20)',
     alignItems: 'center',
     justifyContent: 'space-evenly',
     // marginTop : Platform.OS === 'android' ? StatusBar.currentHeight : 0,
@@ -51,7 +44,7 @@ const styles = StyleSheet.create({
   },
   stateBoxState:{
     height : 30,
-    width : 120,
+    width : 135,
     backgroundColor : '#505050',
     borderRadius : 5,
     // top : 5,
@@ -65,7 +58,7 @@ const styles = StyleSheet.create({
   },
   stateBox:{
     height : 30,
-    width : 77,
+    width : 135,
     backgroundColor : '#f6f6f7',
     borderRadius : 5,
     // top : 5,
@@ -81,9 +74,6 @@ const styles = StyleSheet.create({
     fontSize : 15,
     fontWeight : '700',
     color : '#6c757d',
-    textShadowColor: 'rgba(0, 0, 0, 0.50)',
-    textShadowOffset: {width: -1, height: 1},
-    textShadowRadius: 10,
   },
   dataStyle:{
     fontSize : 13,

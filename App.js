@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, Button } from 'react-native';
 import Header from './components/Header'
 import HomeData from './components/HomeData'
 import { useState, useEffect } from "react";
 
 import colors from './components/config/colors.js'
+import { Updates } from 'expo';
 
 
 export default function App() {
@@ -25,8 +26,8 @@ export default function App() {
     <ScrollView>
         <Header/>
         <View style={styles.dateTimeStyle}>
-          {/* <Text style={styles.dateTimeTextStyle}>{Date().getDate() + '/' + Date().getMonth() + '/' + Date().getFullYear() + ' ' + Date().getHours() + ':' + Date().getMinutes() + ':' + Date().getSeconds()}</Text> */}
-          <Text style={styles.dateTimeTextStyle}>•{dta}•</Text>
+        <Text style={styles.dateTimeTextStyle}>•{dta}•</Text>
+        <Button title="Refresh" onPress={() => Updates.reload() } />
         </View>
         <HomeData/>
         {/* <Text>Open up App.js to start working on your app test best !</Text> */}
@@ -53,11 +54,12 @@ const styles = StyleSheet.create({
     // backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 10
   },
   dateTimeTextStyle: {
     fontSize : 15,
     fontWeight : '700',
     color : colors.timeColor,
     
-  },
+  }
 });

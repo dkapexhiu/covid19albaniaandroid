@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "covid19albania",
-    "slug": "snack-777cbd3f-ccf8-4dcc-9573-aaaa99f0b204",
+    "name": "Covid19 Albania",
+    "slug": "covid19-albania",
     "platforms": [
       "ios",
       "android",
@@ -22,7 +22,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.danielk21.covid19albania",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.danielk21.covid19albania",
+      "versionCode": 1
     }
   }
 }

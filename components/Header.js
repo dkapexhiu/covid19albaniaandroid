@@ -8,9 +8,6 @@ export default function Header() {
 //   console.log("hi")
   return (
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Text>Logo</Text>
-      </View>
       <View style={styles.titleContainer}>
         <View style={styles.titleTextContainer}> 
             <View style={styles.c19BoxStyle}>
@@ -18,7 +15,7 @@ export default function Header() {
             </View>
             <View style={styles.trackerBoxStyle}>
                 <Text style={styles.titleText}>
-                    TRACKER
+                    ALBANIA
                 </Text>
             </View>
         </View>
@@ -40,15 +37,8 @@ const styles = StyleSheet.create({
     paddingTop : Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     elevation : 5
   },
-  logoContainer: {
-    flex: 0.3,
-    backgroundColor: colors.secondary,
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
   titleContainer: {
-    flex: 0.7,
+    flex: 1,
     backgroundColor: colors.secondary,
     alignItems: 'center',
     justifyContent: 'center',
@@ -56,7 +46,7 @@ const styles = StyleSheet.create({
   },
   titleTextContainer: {
       height: 10,
-      width : 100,
+      width : 200,
     flex: 1,
     flexDirection : 'row',
     // top : 50,
