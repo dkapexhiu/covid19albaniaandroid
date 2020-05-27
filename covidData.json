@@ -185,5 +185,22 @@
         "dchanges": 0,
         "rchanges": 0,
         "cchanges": 0
+    },
+        {
+        "id": "TOT",
+        "state": "Total",
+        "confirmed": 1004,
+        "recovered": 795,
+        "deaths": 32,
+        "active": 0,
+        "aChanges": 0,
+        "cChanges": 0,
+        "rChanges": 0,
+        "dChanges": 0,
+        "districtData": [],
+        "achanges": 0,
+        "dchanges": 0,
+        "rchanges": 0,
+        "cchanges": 0
     }
 ]
