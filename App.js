@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions, Button } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, Button, TouchableOpacity } from 'react-native';
 import Header from './components/Header'
 import HomeData from './components/HomeData'
 import { useState, useEffect } from "react";
@@ -27,8 +27,21 @@ export default function App() {
         <Header/>
         <View style={styles.dateTimeStyle}>
         <Text style={styles.dateTimeTextStyle}>•{dta}•</Text>
-        <Button title="Refresh" onPress={() => Updates.reload() } />
         </View>
+        <TouchableOpacity
+                style ={{
+                    height: 40,
+                    width:160,
+                    borderRadius:20,
+                    backgroundColor : "transparent",
+                    marginLeft :'auto',
+                    marginRight:'auto',
+                    marginTop :0
+                }}>
+        <Button onPress={() => Updates.reload() }           
+            title="Refresh"
+          />
+        </TouchableOpacity>
         <HomeData/>
         {/* <Text>Open up App.js to start working on your app test best !</Text> */}
         
@@ -54,12 +67,13 @@ const styles = StyleSheet.create({
     // backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10
   },
   dateTimeTextStyle: {
     fontSize : 15,
     fontWeight : '700',
     color : colors.timeColor,
-    
+  },
+  button: {
+    color: colors.white,
   }
 });
