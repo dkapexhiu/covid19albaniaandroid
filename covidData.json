@@ -1,7 +1,7 @@
 [    {
         "id": "TR",
         "state": "Tirane",
-        "active": 172
+        "active": 183
     },
      {
         "id": "DR",
@@ -11,12 +11,12 @@
      {
         "id": "KR",
         "state": "Kruje",
-        "active": 22
+        "active": 23
     },
      {
         "id": "SH",
         "state": "Shkoder",
-        "active": 10
+        "active": 11
     },
      {
         "id": "KA",
