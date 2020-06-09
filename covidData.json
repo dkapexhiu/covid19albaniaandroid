@@ -1,7 +1,7 @@
 [    {
         "id": "TR",
         "state": "Tirane",
-        "active": 188
+        "active": 204
     },
      {
         "id": "DR",
@@ -16,12 +16,12 @@
      {
         "id": "SH",
         "state": "Shkoder",
-        "active": 25
+        "active": 29
     },
      {
         "id": "KA",
         "state": "Kamez",
-        "active": 17
+        "active": 19
     },
     {
         "id": "MT",
@@ -31,7 +31,7 @@
     {
         "id": "LU",
         "state": "Lushnje",
-        "active": 6
+        "active": 4
     },
     {
         "id": "TP",
@@ -51,6 +51,11 @@
     {
         "id": "MA",
         "state": "Mallakaster",
+        "active": 1
+    },
+    {
+        "id": "LZ",
+        "state": "Lezhe",
         "active": 1
     }
 ]
