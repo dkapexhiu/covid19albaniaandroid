@@ -1,22 +1,22 @@
 [    {
         "id": "TR",
         "state": "Tirane",
-        "active": 204
+        "active": 205
     },
      {
         "id": "DR",
         "state": "Durres",
-        "active": 10
+        "active": 14
     },
      {
         "id": "KR",
         "state": "Kruje",
-        "active": 24
+        "active": 27
     },
      {
         "id": "SH",
         "state": "Shkoder",
-        "active": 29
+        "active": 38
     },
      {
         "id": "KA",
@@ -31,7 +31,7 @@
     {
         "id": "LU",
         "state": "Lushnje",
-        "active": 4
+        "active": 6
     },
     {
         "id": "TP",
@@ -56,6 +56,21 @@
     {
         "id": "LZ",
         "state": "Lezhe",
+        "active": 1
+    },
+    {
+        "id": "BR",
+        "state": "Berat",
+        "active": 1
+    },
+    {
+        "id": "PK",
+        "state": "Puke",
+        "active": 1
+    },
+    {
+        "id": "UV",
+        "state": "Ura Vajgurore",
         "active": 1
     }
 ]
