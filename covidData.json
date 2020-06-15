@@ -1,86 +1,46 @@
 [    {
         "id": "TR",
         "state": "Tirane",
-        "active": 199
+        "active": 249
     },
      {
         "id": "DR",
         "state": "Durres",
-        "active": 15
+        "active": 25
     },
      {
         "id": "KR",
         "state": "Kruje",
-        "active": 32
+        "active": 63
     },
      {
         "id": "SH",
         "state": "Shkoder",
-        "active": 45
+        "active": 68
     },
      {
         "id": "KA",
         "state": "Kamez",
-        "active": 23
-    },
-    {
-        "id": "MT",
-        "state": "Mat",
-        "active": 2
+        "active": 27
     },
     {
         "id": "LU",
         "state": "Lushnje",
-        "active": 6
-    },
-    {
-        "id": "TP",
-        "state": "Tropoje",
-        "active": 2
-    },
-    {
-        "id": "KC",
-        "state": "Korce",
-        "active": 1
-    },
-    {
-        "id": "LB",
-        "state": "Librazhd",
-        "active": 1
-    },
-    {
-        "id": "MA",
-        "state": "Mallakaster",
-        "active": 1
-    },
-    {
-        "id": "LZ",
-        "state": "Lezhe",
-        "active": 1
-    },
-    {
-        "id": "BR",
-        "state": "Berat",
-        "active": 1
+        "active": 13
     },
     {
         "id": "PK",
         "state": "Puke",
-        "active": 7
-    },
-    {
-        "id": "UV",
-        "state": "Ura Vajgurore",
-        "active": 1
+        "active": 11
     },
     {
         "id": "VL",
         "state": "Vlore",
-        "active": 6
+        "active": 21
     },
     {
         "id": "EL",
         "state": "Elbasan",
-        "active": 3
+        "active": 6
     }
 ]
