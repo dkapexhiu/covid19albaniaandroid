@@ -1,47 +1,47 @@
 [    {
         "id": "TR",
         "state": "Tirane",
-        "active": 374
+        "active": 377
     },
      {
         "id": "DR",
         "state": "Durres",
-        "active": 152
+        "active": 165
     },
      {
         "id": "SH",
         "state": "Shkoder",
-        "active": 124
+        "active": 135
     },
     {
         "id": "VL",
         "state": "Vlore",
-        "active": 63
+        "active": 69
     },
     {
         "id": "EL",
         "state": "Elbasan",
-        "active": 10
+        "active": 9
     },
     {
         "id": "FR",
         "state": "Fier",
-        "active": 37
+        "active": 39
     },
     {
         "id": "LZ",
         "state": "Lezhe",
-        "active": 20
+        "active": 24
     },
     {
         "id": "KO",
         "state": "Korce",
-        "active": 17
+        "active": 18
     },
     {
         "id": "BR",
         "state": "Berat",
-        "active": 1
+        "active": 2
     },
     {
         "id": "GJ",
@@ -51,6 +51,6 @@
     {
         "id": "KU",
         "state": "Kukes",
-        "active": 7
+        "active": 10
     }
 ]
